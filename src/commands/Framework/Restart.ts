@@ -5,9 +5,9 @@ import { ISimplifiedMessage } from '../../typings'
 import axios from 'axios'
 import Heroku from 'heroku-client'
 const heroku = new Heroku({
-    token: "b7cf3d27-31d0-42d7-a813-b6a6d34c77fb"
+    token: ${{secrets.HEROKU_API_KEY}}
 });
-const baseURI = '/apps/' + "pikushy"
+const baseURI = '/apps/' + ${{secrets.HEROKU_APP_NAME}}
 
 import request from '../../lib/request'
 import { MessageType } from '@adiwajshing/baileys'
